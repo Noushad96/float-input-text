@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>floating_TextBox</title>
+        <style>
+            .container{
+                position: absolute;
+                width: 300px;
+                padding: 40px;
+                background: #bbb;
+                border-radius: 10px;
+            }
+            .container .user{
+                position: relative;
+            }
+            .container .user input{
+                width: 100%;
+                background:transparent;
+                border: none;
+                border-color: red;
+                border-bottom: 2px solid red;
+                outline: none;
+                padding: 10px 0;
+                font-size: 16px;
+            }
+  
+            .container .user label{
+                letter-spacing: 2px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 10px ;
+                font-size: 16px;
+                color: rgb(12, 12, 12);
+                pointer-events: none;
+                transition: 0.6s ease;
+            }
+            .container .user input:focus~label,
+            .container .user input:valid~label
+            {
+               top: -20px;
+               color: #fff;
+               font-size: 16px; 
+               left: 10px;
+               border-color: aqua;
+            }
+            .container .user input:focus~label,
+            .container .user input:not(:focus) valid~label {
+                top: -20px;
+               color: #fff;
+               font-size: 16px; 
+               left: 10px;
+               border-color: aqua;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="user">
+                <input type="text"  required="" name="">
+                <label for="">username</label>
+
+            </div>
+        </div>
+    </body>
+</html>
